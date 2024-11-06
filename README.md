@@ -45,5 +45,5 @@ pip install -r requirements.txt
 
 ## Step: Run FastAPI Server
 ```sh
-fastapi run main.py
+fastapi run main.py --host [port] --port [port]
 ```
