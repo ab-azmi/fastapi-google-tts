@@ -54,7 +54,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Step: Run FastAPI Server
+## Step 5: Run FastAPI Server
 Pastikan backend berjalan dengan menjalankan
 ```sh
 fastapi run main.py --host [port] --port [port]
@@ -171,6 +171,12 @@ sudo systemctl restart apache2
 ```
 
 ## Step 4 : Run Website
+Pastikan sudah berada di direktori repo fastapi-google-tts
+Dan sudah mengaktifkan venv python dengan
+```sh
+source venv/bin/activate
+```
+
 Run backend dengan pm2
 ```sh
 pm2 start "fastapi run main.py --host 0.0.0.0 --port [port]" --name gtts
