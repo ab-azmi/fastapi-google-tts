@@ -50,7 +50,7 @@ pip install -r requirements.txt
 fastapi run main.py --host [port] --port [port]
 ```
 
-# -------------[ Setup Backend ]---------------
+# -------------[ Setup Server ]---------------
 ## Prerequisites
 - apache2
 - nodejs, pm2
