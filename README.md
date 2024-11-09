@@ -6,10 +6,19 @@
 - Ubuntu 20.04 or later
 - Python 3.8 or later
 
+## Step 0 : Clone Repo
+Clone repo ini, dan masuk ke dalam direktori
+```sh
+git clone https://github.com/ab-azmi/fastapi-google-tts.git
+```
+
+```sh
+cd fastapi-google-tts
+```
 
 ## Step 1: Update and Upgrade the System
 
-First, update and upgrade your system packages:
+Update dan upgrade system package:
 
 ```sh
 sudo apt update
@@ -22,14 +31,14 @@ Install Python and pip
 sudo apt install python3 python3-pip -y 
 ```
 
-Verify the installation
+Verify instalasi python
 ```sh
 python3 --version
 pip3 --version
 ```
 
 ## Step 3: Set Up a Virtual Environment
-Create a virtual environment for your project:
+Membuat virtual python environment untuk backend:
 ```sh
 sudo apt install python3-venv -y
 python3 -m venv venv
@@ -46,9 +55,11 @@ pip install -r requirements.txt
 ```
 
 ## Step: Run FastAPI Server
+Pastikan backend berjalan dengan menjalankan
 ```sh
 fastapi run main.py --host [port] --port [port]
 ```
+Lalu hentikan, karena nanti akan dijalankan dengan pm2
 
 # -------------[ Setup Server ]---------------
 ## Prerequisites
@@ -160,6 +171,14 @@ sudo systemctl restart apache2
 ```
 
 ## Step 4 : Run Website
-Pastikan process pm2 dari tahap setup backend masih online.
+Run backend dengan pm2
+```sh
+pm2 start "fastapi run main.py --host 0.0.0.0 --port [port]" --name gtts
+```
+
+Pastikan process pm2 online
+```sh
+pm2 l
+```
 
 Akses website di [sub-domain.net]
