@@ -107,6 +107,16 @@ SetEnv proxy-initial-not-pooled 1
 
 Save & Exit
 
+Enable tts.conf
+```sh
+sudo a2ensite tts.conf
+```
+
+Reload Konfigurasi
+```sh
+sudo systemctl reload apache2
+```
+
 ## Step 2 : Membuat Sertifikat SSL
 Akses user root
 ```sh
